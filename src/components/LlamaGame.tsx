@@ -25,6 +25,7 @@ const LlamaGame = () => {
   const [foodItems, setFoodItems] = useState<FoodItem[]>([]);
   const [score, setScore] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [keysPressed, setKeysPressed] = useState<Set<string>>(new Set());
   const { toast } = useToast();
 
@@ -115,6 +116,28 @@ const LlamaGame = () => {
     return () => clearInterval(gameInterval);
   }, [isPlaying, keysPressed, foodItems, checkCollision, collectFood]);
 
+  // Timer countdown
+  useEffect(() => {
+    if (!isPlaying || timeLeft <= 0) return;
+
+    const timerInterval = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          setIsPlaying(false);
+          toast({
+            title: "Time's up! 🦙",
+            description: `Final Score: ${score} points`,
+            duration: 3000,
+          });
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timerInterval);
+  }, [isPlaying, timeLeft, score, toast]);
+
   // Food spawning
   useEffect(() => {
     if (!isPlaying) return;
@@ -142,6 +165,7 @@ const LlamaGame = () => {
   const startGame = () => {
     setIsPlaying(true);
     setScore(0);
+    setTimeLeft(60);
     setFoodItems([]);
     setLlamaPosition({ x: 280, y: 180 });
     generateFood();
@@ -164,6 +188,7 @@ const LlamaGame = () => {
 
       <GameUI 
         score={score}
+        timeLeft={timeLeft}
         isPlaying={isPlaying}
         onStart={startGame}
         onPause={pauseGame}
@@ -180,6 +205,9 @@ const LlamaGame = () => {
 
       {!isPlaying && (
         <div className="mt-6 text-center">
+          <p className="text-muted-foreground mb-2">
+            🎯 Goal: Eat as much food as possible in 60 seconds!
+          </p>
           <p className="text-muted-foreground">
             🌱 Grass = 10 points • 🌾 Grains = 20 points
           </p>
