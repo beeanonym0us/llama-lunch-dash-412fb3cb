@@ -51,8 +51,7 @@ export const GameUI: React.FC<GameUIProps> = ({
           <Button 
             onClick={onStart}
             size="lg"
-            disabled={timeLeft === 0 && !isPlaying}
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft font-semibold px-8 py-3 rounded-2xl transition-all duration-200 hover:scale-105 disabled:opacity-50"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft font-semibold px-8 py-3 rounded-2xl transition-all duration-200 hover:scale-105"
           >
             {timeLeft === 0 ? '🔄 New Game' : '🎮 Start Game'}
           </Button>
