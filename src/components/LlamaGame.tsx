@@ -146,7 +146,7 @@ const LlamaGame = () => {
       if (foodItems.length < 5) {
         generateFood();
       }
-    }, 2000);
+    }, 1200);
 
     return () => clearInterval(foodInterval);
   }, [isPlaying, foodItems.length, generateFood]);
