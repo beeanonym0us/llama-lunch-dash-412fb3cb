@@ -42,7 +42,7 @@ export const GameArea: React.FC<GameAreaProps> = ({
           height: llamaSize,
         }}
       >
-        <div className="w-full h-full bg-llama-body rounded-full shadow-soft border-4 border-llama-accent flex items-center justify-center text-2xl animate-bounce-cute">
+        <div className="w-full h-full bg-llama-body rounded-full shadow-soft flex items-center justify-center text-2xl animate-bounce-cute">
           🦙
         </div>
       </div>
