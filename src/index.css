@@ -8,35 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cute Llama Game Color Palette */
+    --background: 41 100% 96%;
+    --foreground: 25 25% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 25% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 25% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 41 50% 85%;
+    --primary-foreground: 25 50% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 164 45% 85%;
+    --secondary-foreground: 25 50% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 41 30% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 50% 85%;
+    --accent-foreground: 25 50% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 41 25% 88%;
+    --input: 41 25% 88%;
+    --ring: 41 50% 70%;
 
-    --radius: 0.5rem;
+    /* Game-specific colors */
+    --game-bg: 164 60% 95%;
+    --llama-body: 41 50% 88%;
+    --llama-accent: 164 45% 75%;
+    --food-grass: 120 60% 70%;
+    --food-grain: 45 80% 75%;
+    --score-highlight: 340 60% 80%;
+
+    /* Cute shadows and glows */
+    --shadow-soft: 0 4px 12px hsla(25, 25%, 25%, 0.1);
+    --shadow-cute: 0 8px 25px hsla(25, 25%, 25%, 0.15);
+    --glow-cute: 0 0 20px hsla(340, 50%, 85%, 0.4);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 

@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Game-specific colors
+				'game-bg': 'hsl(var(--game-bg))',
+				'llama-body': 'hsl(var(--llama-body))',
+				'llama-accent': 'hsl(var(--llama-accent))',
+				'food-grass': 'hsl(var(--food-grass))',
+				'food-grain': 'hsl(var(--food-grain))',
+				'score-highlight': 'hsl(var(--score-highlight))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +91,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-cute': {
+					'0%, 100%': {
+						transform: 'translateY(0) scale(1)',
+					},
+					'50%': {
+						transform: 'translateY(-4px) scale(1.05)',
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-2deg)' },
+					'50%': { transform: 'rotate(2deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsla(340, 50%, 85%, 0.4)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 30px hsla(340, 50%, 85%, 0.8)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-cute': 'bounce-cute 0.6s ease-in-out infinite',
+				'wiggle': 'wiggle 0.3s ease-in-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'cute': 'var(--shadow-cute)',
+				'glow': 'var(--glow-cute)'
 			}
 		}
 	},
