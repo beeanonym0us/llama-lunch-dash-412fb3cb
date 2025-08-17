@@ -25,6 +25,42 @@ export const GameArea: React.FC<GameAreaProps> = ({
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0">
+        {/* Sun */}
+        <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-full shadow-lg opacity-80">
+          <div className="absolute inset-0 flex items-center justify-center text-yellow-100 text-lg">☀️</div>
+          {/* Sun rays */}
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-0.5 h-3 bg-yellow-400 rounded-full opacity-60"></div>
+          <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0.5 h-3 bg-yellow-400 rounded-full opacity-60"></div>
+          <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-3 h-0.5 bg-yellow-400 rounded-full opacity-60"></div>
+          <div className="absolute -right-1 top-1/2 transform -translate-y-1/2 w-3 h-0.5 bg-yellow-400 rounded-full opacity-60"></div>
+          <div className="absolute -top-1 -left-1 w-2 h-0.5 bg-yellow-400 rounded-full opacity-50 transform rotate-45"></div>
+          <div className="absolute -top-1 -right-1 w-2 h-0.5 bg-yellow-400 rounded-full opacity-50 transform -rotate-45"></div>
+          <div className="absolute -bottom-1 -left-1 w-2 h-0.5 bg-yellow-400 rounded-full opacity-50 transform -rotate-45"></div>
+          <div className="absolute -bottom-1 -right-1 w-2 h-0.5 bg-yellow-400 rounded-full opacity-50 transform rotate-45"></div>
+        </div>
+
+        {/* Clouds */}
+        <div className="absolute top-6 left-8 flex items-center opacity-60">
+          <div className="w-8 h-6 bg-white rounded-full"></div>
+          <div className="w-10 h-8 bg-white rounded-full -ml-3"></div>
+          <div className="w-6 h-5 bg-white rounded-full -ml-2"></div>
+        </div>
+        <div className="absolute top-12 left-32 flex items-center opacity-50">
+          <div className="w-6 h-4 bg-white rounded-full"></div>
+          <div className="w-8 h-6 bg-white rounded-full -ml-2"></div>
+          <div className="w-5 h-4 bg-white rounded-full -ml-1"></div>
+        </div>
+        <div className="absolute top-8 right-24 flex items-center opacity-55">
+          <div className="w-7 h-5 bg-white rounded-full"></div>
+          <div className="w-9 h-7 bg-white rounded-full -ml-3"></div>
+          <div className="w-6 h-5 bg-white rounded-full -ml-2"></div>
+        </div>
+        <div className="absolute top-16 right-8 flex items-center opacity-45">
+          <div className="w-5 h-4 bg-white rounded-full"></div>
+          <div className="w-7 h-5 bg-white rounded-full -ml-2"></div>
+          <div className="w-4 h-3 bg-white rounded-full -ml-1"></div>
+        </div>
+
         {/* Grass patches */}
         <div className="absolute bottom-0 left-0 w-16 h-8 bg-gradient-to-t from-green-400 to-green-300 rounded-t-full opacity-40"></div>
         <div className="absolute bottom-0 left-20 w-12 h-6 bg-gradient-to-t from-green-500 to-green-400 rounded-t-full opacity-35"></div>
